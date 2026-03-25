@@ -5,7 +5,7 @@ A specialized Python utility designed for surgical modification of Dell UEFI BIO
 Thie was primarily created for the purpose of disabling pre-boot DMA without requiring the UEFI BIOS password or triggering the requirement for the recovery key. It was tested successfully on a Dell Optiplex 3000 with UEFI version 1.23.2. This was vibe-coded and works for me, YMMV. 
 
 ## 🛡️ The "Safety" Problem
-Modern Dell systems employ Intel Boot Guard. The CPU verifies the hash of the **Initial Boot Block (IBB)** before execution. Modifying even a single bit within this range will cause a verification failure, resulting in a **permanent brick** (the device will not power on or POST).
+Modern Dell systems employ Intel Boot Guard. The CPU verifies the hash of the **Initial Boot Block (IBB)** before execution. Modifying even a single bit within this range will cause a verification failure, resulting in the device not powering on or POST).
 
 This tool solves this by:
 1. **Programmatically parsing the FIT** (Firmware Interface Table) to find the exact IBB boundaries for *your specific* dump.
