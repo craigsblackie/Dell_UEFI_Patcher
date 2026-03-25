@@ -29,6 +29,7 @@ Scan a BIOS dump to see where the setting is located and whether it is safe to p
 ```bash
 python3 dell_bios_patcher.py bios_dump.bin
 ```
+Usually there will be multiple matches, I have found usually only one is actually needed but patching all has not caused me any problem.
 
 ### 2. Apply Patch
 Generate a new binary with the setting disabled (set to `0x00`) in safe areas:
