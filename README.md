@@ -46,5 +46,3 @@ Once the IBB range is identified (FIT Type 0x07), the script maps the UEFI memor
 ## ⚠️ Disclaimer
 **WARNING:** BIOS modification is inherently risky. While this tool includes safety checks to prevent Intel Boot Guard triggers, it cannot guarantee that the modified BIOS logic will function as intended. Always have a hardware programmer (like a CH341A) and a verified backup of your original dump before proceeding.
 
----
-*Developed for research into Pre-boot DMA security and IOMMU configuration on Dell Latitude/Precision hardware.*
