@@ -1,6 +1,7 @@
 # Dell BIOS Surgical Patcher (IBB-Safe)
 
 A specialized Python utility designed for surgical modification of Dell UEFI BIOS binaries. This tool automates the discovery of **Intel Boot Guard (BtG)** protected ranges and identifies specific VarStore (Setup) offsets for modification, ensuring that patches are only applied to "Safe" (unverified) regions of the flash.
+Thie was primarily created for the purpose of disabling pre-boot DMA without requiring the UEFI BIOS password, it was tested successfully on a Dell Optiplex 3000 with UEFI version 1.23.2. This was vibe-coded and works for me, YMMV. 
 
 ## 🛡️ The "Safety" Problem
 Modern Dell systems employ Intel Boot Guard. The CPU verifies the hash of the **Initial Boot Block (IBB)** before execution. Modifying even a single bit within this range will cause a verification failure, resulting in a **permanent brick** (the device will not power on or POST).
