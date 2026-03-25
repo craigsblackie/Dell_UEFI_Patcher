@@ -3,7 +3,10 @@
 A specialized Python utility designed for surgical modification of Dell UEFI BIOS binaries. This tool automates the discovery of **Intel Boot Guard (BtG)** protected ranges and identifies specific VarStore (Setup) offsets for modification, ensuring that patches are only applied to "Safe" (unverified) regions of the flash.
 
 This was primarily created for the purpose of disabling pre-boot DMA without requiring the UEFI BIOS password or triggering the requirement for the recovery key. Intended to be a companion to https://github.com/PN-Tester/DMAReaper. 
-It was tested successfully on a Dell Optiplex 3000 with UEFI version 1.23.2. This was vibe-coded and works for me, YMMV. 
+
+It was tested successfully on a Dell Optiplex 3000 with UEFI version 1.23.2 and version 1.32.1 (the latest version at the time of testing).The patch also survived an official Dell Update.  
+
+This was vibe-coded and works for me, YMMV. 
 
 ## 🛡️ The "Safety" Problem
 Modern Dell systems employ Intel Boot Guard. The CPU verifies the hash of the **Initial Boot Block (IBB)** before execution. Modifying even a single bit within this range will cause a verification failure, resulting in the device not powering on or POST).
