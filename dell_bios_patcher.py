@@ -7,6 +7,7 @@ import sys
 DEFAULT_GUID_HEX = "43D687ECA4EBB54BA1E53F3E36B20DA9"
 # Default Name: "Setup" in UTF-16LE + Null terminator
 DEFAULT_NAME_HEX = "530065007400750070000000"
+# Pre-boot DMA setting on Dell Optiplex 3000, 0x975 on the XPS 15 9560
 DEFAULT_OFFSET = 0x812
 
 def find_ibb_range(data):
